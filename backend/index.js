@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 //app.use(cors());
 
-mongoose.connect('mongodb+srv://mern-vercel:password1234@mern-vercel.l6lfk4v.mongodb.net/?retryWrites=true&w=majority&appName=mern-vercel');
+mongoose.connect('mongodb+srv://mern-vercel:password1234@mern-vercel.l6lfk4v.mongodb.net/test?retryWrites=true&w=majority&appName=mern-vercel');
 
 app.post('/register', (req, res)=>{
     // To post / insert data into database
