@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://mern-vercel-api-flame.vercel.app/register', {name, email, password})
+        axios.post( 'https://mern-vercel-api-flame.vercel.app/register', {name, email, password}, {withCredentials: false})
         .then(result => {
             console.log(result);
             if(result.data === "Already registered"){
