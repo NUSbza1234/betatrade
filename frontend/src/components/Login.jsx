@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://mern-vercel-api-flame.vercel.app/login', {email, password})
+        axios.post( 'https://mern-vercel-api-flame.vercel.app/login', {email, password}, {withCredentials: false})
         .then(result => {
             console.log(result);
             if(result.data === "Success"){
