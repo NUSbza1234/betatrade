@@ -3,10 +3,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const FormDataModel = require ('./models/FormData');
 
+const corsOrigin ={
+    origin:'https://mern-vercel-alpha.vercel.app', //or whatever port your frontend is using
+    credentials:true,            
+    optionSuccessStatus:200
+}
+app.use(cors(corsOrigin));
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
 
 mongoose.connect('mongodb+srv://mern-vercel:password1234@mern-vercel.l6lfk4v.mongodb.net/?retryWrites=true&w=majority&appName=mern-vercel');
 
