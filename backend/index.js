@@ -6,7 +6,7 @@ const FormDataModel = require ('./models/FormData');
 const corsOrigin ={
     origin:'https://mern-vercel-alpha.vercel.app', //or whatever port your frontend is using
     methods: ["POST", "GET"],
-    credentials:true,            
+    credentials:false,            
     optionSuccessStatus:200
 }
 app.use(cors(corsOrigin));
