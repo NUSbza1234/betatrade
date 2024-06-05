@@ -5,9 +5,7 @@ const FormDataModel = require ('./models/FormData');
 
 const corsOrigin ={
     origin:'*', //or whatever port your frontend is using
-    methods: ["POST", "GET"],
-    credentials:true,            
-    optionSuccessStatus:200
+    methods: ["GET", "POST", "PUT"]
 }
 app.use(cors(corsOrigin));
 
